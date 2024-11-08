@@ -1,0 +1,137 @@
+/* NFTCard.css */
+.nft-card {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  width: 100%;
+  max-width: 300px;
+  position: relative; /* 使子元素绝对定位 */
+}
+
+.nft-card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+}
+
+.image-container {
+  position: relative; /* 使overlay绝对定位 */
+}
+
+.image-container img {
+  width: 100%;
+  height: 300px; /* 可以设置为图片的实际高度 */
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  padding: 1em; /* 添加内边距 */
+  box-sizing: border-box; /* 边框计算在宽度内 */
+}
+
+.nft-card:hover .overlay {
+  opacity: 1;
+}
+
+.nft-card h3,
+.nft-card p {
+  margin: 0.5em; /* 调整内边距 */
+  text-align: center;
+}
+
+.nft-card .owner {
+  font-size: 0.9rem;
+  color: white;
+  word-wrap: break-word; /* 允许在单词边界换行 */
+  white-space: normal; /* 允许自动换行 */
+  overflow-wrap: break-word; /* 允许在长单词内换行 */
+}
+
+
+
+
+
+/* NFTCard.css */
+/* ...其他现有样式... */
+
+/* 按钮公共样式 */
+.button-common {
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin: 5px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em; /* 字母间距 */
+}
+
+.button-common:hover {
+  background-color: #555; /* 深色背景 */
+  transform: scale(1.05); /* 轻微放大 */
+}
+
+.button-common:active {
+  transform: scale(0.98); /* 按下时缩小 */
+}
+
+/* 特定按钮的颜色 */
+.delist-button {
+  background-color: #ffc107; /* 黄色 */
+}
+
+/* 特定按钮的颜色 */
+.transfer-button {
+  background-color:lightpink
+}
+
+.onList-button {
+  background-color: #28a745; /* 绿色 */
+}
+
+.purchase-button {
+  background-color: #007bff; /* 蓝色 */
+}
+
+.delete-button {
+  background-color: #dc3545; /* 红色 */
+}
+
+/* 按钮容器样式 */
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px; /* 控制按钮之间的间隔 */
+  margin-top: 1em;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .button-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .button-common {
+    width: 100%; /* 在小屏幕上，按钮宽度充满容器 */
+    margin: 5px 0;
+  }
+}

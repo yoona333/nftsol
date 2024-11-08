@@ -1,0 +1,84 @@
+/* MyNFTs.css */
+.my-nfts-container {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.my-nfts-container h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.my-nfts-container form {
+  width: 100%;
+  max-width: 450px; /* 减小最大宽度 */
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem; /* 减少底部外边距 */
+}
+
+.my-nfts-container input,
+.my-nfts-container textarea {
+  padding: 15px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+}
+
+.my-nfts-container button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  background-color: pink;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin: 5px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em; /* 字母间距 */
+}
+
+.my-nfts-container button:hover {
+  background-color: paleturquoise;
+}
+
+.my-nfts-container .error-message {
+  color: #ff0000;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.nft-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; /* 可以根据需要调整对齐方式 */
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.nft-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 40px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .nft-list {
+    justify-content: space-between; /* 一行三个 */
+  }
+}
+
+@media (min-width: 1024px) {
+  .nft-list {
+    justify-content: space-between; /* 一行四个 */
+  }
+}

@@ -5,7 +5,7 @@ import * as fs from "fs";
 const envFilePath = "./.env";
 
 /**
- * Generate a new random private key and write it to the .env file
+ * Generate a new random private key and write it to the .env file  随机生成私钥 写入.env文件
  */
 const setNewEnvConfig = (existingEnvConfig = {}) => {
   console.log("👛 Generating new Wallet");

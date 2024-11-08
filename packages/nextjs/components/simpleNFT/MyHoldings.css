@@ -1,0 +1,25 @@
+/* MyHoldings.css */
+.my-holdings {
+  margin-top: 20px;
+}
+
+.my-holdings .loading {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333333;
+}
+
+.my-holdings .error {
+  font-size: 18px;
+  color: #ff0000;
+}
+
+.my-holdings .nft-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.my-holdings .nft-card:hover {
+  transform: translateY(-5px);
+}
